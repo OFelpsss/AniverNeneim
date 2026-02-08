@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>🎂 Feliz Aniversário Neneim Vittorya! ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Partículas de fundo -->
+    <div class="particles-bg" id="particlesBg"></div>
+    
+    <!-- Estrelas animadas -->
+    <div class="stars-container" id="starsContainer"></div>
+    
+    <!-- Efeito de confetes -->
+    <div class="confetti-container" id="confettiContainer"></div>
+    
+    <!-- Navegação flutuante -->
+    <nav class="floating-nav" role="navigation" aria-label="Menu de seções">
+        <button type="button" class="nav-item active" data-section="header" onclick="scrollToSection('header')" aria-label="Início">🏠</button>
+        <button type="button" class="nav-item" data-section="cake" onclick="scrollToSection('cake')" aria-label="Bolo">🎂</button>
+        <button type="button" class="nav-item" data-section="countdown" onclick="scrollToSection('countdown')" aria-label="Contagem">⏰</button>
+        <button type="button" class="nav-item" data-section="gallery" onclick="scrollToSection('gallery')" aria-label="Fotos">📸</button>
+        <button type="button" class="nav-item" data-section="message" onclick="scrollToSection('message')" aria-label="Mensagem">💌</button>
+    </nav>
+
+    <!-- Header principal -->
+    <header class="main-header" id="header">
+        <div class="header-content">
+            <div class="celebration-text">🎉 FESTA DE ANIVERSÁRIO 🎉</div>
+            <h1 class="main-title">
+                <span class="title-line-1">Feliz</span>
+                <span class="title-line-2">Aniversário</span>
+                <span class="title-line-3">Neneim Vittorya</span>
+            </h1>
+            <div class="subtitle-container">
+                <div class="date-badge">01 de Maio</div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">↓</div>
+                <span>Role para ver a magia</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção do bolo -->
+    <section class="cake-section" id="cake">
+        <div class="section-title">
+            <h2>🎂 O Bolo Mais Lindo do Mundo 🎂</h2>
+            <div class="title-decoration"></div>
+        </div>
+        
+        <div class="cake-container">
+            <div class="cake-wrapper">
+                <!-- Prato -->
+                <div class="plate"></div>
+                
+                <!-- Bolo -->
+                <div class="cake">
+                    <!-- Camada 1 -->
+                    <div class="layer layer-1"></div>
+                    
+                    <!-- Camada 2 -->
+                    <div class="layer layer-2"></div>
+                    
+                    <!-- Camada 3 -->
+                    <div class="layer layer-3"></div>
+                    
+                    <!-- Glacê -->
+                    <div class="frosting"></div>
+                    
+                    <!-- Decorações -->
+                    <div class="decorations">
+                        <div class="heart heart-1">❤️</div>
+                        <div class="heart heart-2">❤️</div>
+                        <div class="star star-1">⭐</div>
+                        <div class="star star-2">✨</div>
+                        <div class="star star-3">🌟</div>
+                    </div>
+                    
+                    <!-- Velas -->
+                    <div class="candles">
+                        <div class="candle">
+                            <div class="candle-body"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="candle-body"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="candle-body"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="candle-body"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="candle-body"></div>
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Topper -->
+                    <div class="topper">
+                        <div class="flag">Neneim</div>
+                        <div class="pole"></div>
+                    </div>
+                </div>
+                
+                <!-- Efeitos -->
+                <div class="effects">
+                    <div class="sparkle sparkle-1">✨</div>
+                    <div class="sparkle sparkle-2">✨</div>
+                    <div class="sparkle sparkle-3">✨</div>
+                    <div class="sparkle sparkle-4">✨</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cake-controls">
+            <button class="control-btn" onclick="lightCandles()">🕯️ Acender Velas</button>
+            <button class="control-btn" onclick="blowCandles()">💨 Apagar Velas</button>
+            <button class="control-btn" onclick="celebrateCake()">🎉 Celebrar!</button>
+        </div>
+    </section>
+
+    <!-- Contador regressivo -->
+    <section class="countdown-section" id="countdown">
+        <div class="section-title">
+            <h2>⏰ Contagem Regressiva ⏰</h2>
+            <div class="title-decoration"></div>
+        </div>
+        
+        <div class="countdown-container">
+            <div class="countdown-card">
+                <div class="time-display">
+                    <div class="time-unit">
+                        <div class="time-number" id="days">00</div>
+                        <div class="time-label">Dias</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <div class="time-number" id="hours">00</div>
+                        <div class="time-label">Horas</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <div class="time-number" id="minutes">00</div>
+                        <div class="time-label">Minutos</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <div class="time-number" id="seconds">00</div>
+                        <div class="time-label">Segundos</div>
+                    </div>
+                </div>
+                <div class="countdown-message">
+                    <p>Até o grande dia!</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de fotos -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-title">
+            <h2>✨ Fotos da Neneim ✨</h2>
+            <div class="title-decoration"></div>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="memory-card">
+                <div class="memory-image-wrap">
+                    <img class="memory-photo" src="fotos/foto1.jpeg" alt="Memória 1" onerror="this.classList.add('placeholder')">
+                </div>
+                <div class="memory-text">Neneim ❤️</div>
+            </div>
+            <div class="memory-card">
+                <div class="memory-image-wrap">
+                    <img class="memory-photo" src="fotos/foto2.jpeg" alt="Memória 2" onerror="this.classList.add('placeholder')">
+                </div>
+                <div class="memory-text">Neneim ✨</div>
+            </div>
+            <div class="memory-card">
+                <div class="memory-image-wrap">
+                    <img class="memory-photo" src="fotos/foto3.jpeg" alt="Memória 3" onerror="this.classList.add('placeholder')">
+                </div>
+                <div class="memory-text">Neneim 💫</div>
+            </div>
+        </div>
+        <p class="gallery-hint">Fotos da Neneim ❤️</p>
+    </section>
+
+    <!-- Mensagem especial -->
+    <section class="message-section" id="message">
+        <div class="section-title">
+            <h2>💌 Uma Mensagem de Coração 💌</h2>
+            <div class="title-decoration"></div>
+        </div>
+        <div class="message-content-wrapper">
+            <p>Neneim,</p>
+            <p>Hoje é um dia tão especial, e meu coração transborda de alegria e gratidão a Deus por ter colocado você na minha vida. ✨</p>
+            <p>Você é a estrela mais brilhante no meu céu — a que ilumina meus dias e me faz sentir o neneim mais sortudo do universo por ter você pertinho. Te vi aos 15 e o tempo não está passando, está voando. 🥰</p>
+            <p>Queria fazer algo único pra você, algo que mostrasse um pouquinho do quanto você é especial. Por isso criei este cantinho na internet, só pra você: com fotos suas, o tema da Noite Estrelada do Van Gogh (porque assim como a pintura dele, você traz cor, luz e um toque de sonho pra minha vida ✨🎨), e no final uma surpresinha de amor. E em cima, o seu bolo, hihihi!</p>
+            <p>Que seu dia seja tão lindo, radiante e cheio de amor quanto você merece. Que Deus continue te abençoando com muita saúde, felicidade e que todos os seus sonhos se realizem.</p>
+            <p>Parabéns, parabéns, parabéns!</p>
+            <p class="signature">Felipe ❤️</p>
+        </div>
+    </section>
+
+    <section id="love-animation-section" class="love-section">
+        <div class="section-title">
+            <h2>❤️ Uma Animação Especial ❤️</h2>
+            <div class="title-decoration"></div>
+        </div>
+        <div id="love-container">
+            <span id="love-l" class="love-letter">L</span>
+            <span id="love-o" class="love-letter">O</span>
+            <span id="love-v" class="love-letter">V</span>
+            <span id="love-e" class="love-letter">E</span>
+        </div>
+        <button id="play-love-animation" class="control-btn">❤️ Mostrar Amor ❤️</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p class="footer-text">Feito com muito amor para Neneim Vittorya</p>
+            <div class="footer-date">01 de Maio - Dia Especial</div>
+        </div>
+    </footer>
+
+    <!-- Modal de celebração -->
+    <div class="celebration-modal" id="celebrationModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <div class="modal-body">
+                <h2 class="modal-title">PARABÉNS!</h2>
+                <p class="modal-subtitle">Neneim Vittorya</p>
+                <div class="celebration-emojis">
+                    <span>🎂</span>
+                    <span>✨</span>
+                    <span>❤️</span>
+                </div>
+                <div class="modal-message">
+                    <p class="modal-message-line">Que este seja o melhor aniversário da sua vida!</p>
+                    <p class="modal-message-line">Você merece toda a felicidade do mundo!</p>
+                    <p class="modal-message-highlight">Parabéns para a mulher mais linda desse planeta inteirinho, hihi!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
